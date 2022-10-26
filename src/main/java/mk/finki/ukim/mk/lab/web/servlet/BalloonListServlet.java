@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name="BALUN", urlPatterns = "/")
+@WebServlet(name = "balloon_list", urlPatterns = "/hi")
 public class BalloonListServlet extends HttpServlet {
 
     private final BalloonServiceImpl balloonService;
@@ -25,8 +25,9 @@ public class BalloonListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         WebContext context = new WebContext(req, resp, req.getServletContext());
-        context.setVariable("object",this.balloonService.listAll());
+        context.setVariable("object", this.balloonService.listAll());
         this.templateEngine.process("listBalloons.html", context, resp.getWriter());
+
     }
 
     @Override

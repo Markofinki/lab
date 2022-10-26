@@ -15,6 +15,12 @@
     <h1>Welcome to our Balloon Shop App</h1>
 </header>
 <main>
+
+    <ul th:each="product : ${object}">
+        <li th:text="${product.getName()}"></li>
+        <li th:text="${product.getDescription()}"></li>
+    </ul>
+
     <h2>Choose balloon color:</h2>
     <input type="radio" name="color" value="Red Balloon"> Red Balloon<br/>
     <input type="radio" name="color" value="Green Balloon"> Green Balloon<br/>

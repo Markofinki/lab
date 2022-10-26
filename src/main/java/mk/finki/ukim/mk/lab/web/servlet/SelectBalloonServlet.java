@@ -1,7 +1,6 @@
 package mk.finki.ukim.mk.lab.web.servlet;
 
-import javax.servlet.annotation.WebServlet;
 
-@WebServlet(name="selectBalloon", urlPatterns = "/selectBalloon")
+//@WebServlet(name = "select_balloon", urlPatterns = "/selectBalloon")
 public class SelectBalloonServlet {
 }
