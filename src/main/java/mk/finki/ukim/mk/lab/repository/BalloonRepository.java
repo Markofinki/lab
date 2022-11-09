@@ -12,7 +12,7 @@ import java.util.List;
 
 public class BalloonRepository {
 
-    private List<Balloon> balloons = new ArrayList<>(10);
+    private List<Balloon> balloons = new ArrayList<>(20);
 
     public BalloonRepository() {
         for (int i = 0; i < 10; i++){
@@ -32,5 +32,10 @@ public class BalloonRepository {
             }
         }
         return balloonsByName;
+    }
+
+    public Balloon save(Balloon b){
+        balloons.add(b);
+        return b;
     }
 }
